@@ -29,12 +29,12 @@ const projects: Project[] = [
         image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800&h=500" // Placeholder
     },
     {
-        title: "AI Content Generator",
-        description: "SaaS application that uses AI to help writers generate blog posts, social media captions, and email newsletters.",
-        tags: ["React", "OpenAI API", "Stripe", "Supabase"],
-        githubUrl: "#",
+        title: "Personal Expense Tracker",
+        description: "A smart finance tool to track income and expenses with visual analytics. Features budget planning, category management, and monthly reports.",
+        tags: ["React", "Recharts", "Firebase", "Context API"],
+        githubUrl: "https://github.com/jefferson-ai/Expense-Tracker.git",
         liveUrl: "#",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800&h=500" // Placeholder
+        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800&h=500" // Placeholder
     }
 ];
 

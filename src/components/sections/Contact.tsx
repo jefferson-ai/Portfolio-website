@@ -25,13 +25,24 @@ export const Contact = () => {
             return;
         }
 
-        // Simulate API call
+        // Formspree Submission
         try {
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            setIsSuccess(true);
-            setFormState({ name: '', email: '', message: '' });
+            const response = await fetch("https://formspree.io/f/xzddpabn", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formState)
+            });
+
+            if (response.ok) {
+                setIsSuccess(true);
+                setFormState({ name: '', email: '', message: '' });
+            } else {
+                setError('Something went wrong. Please try again.');
+            }
         } catch {
-            setError('Something went wrong. Please try again.');
+            setError('Failed to send message. Please check your connection.');
         } finally {
             setIsSubmitting(false);
         }
