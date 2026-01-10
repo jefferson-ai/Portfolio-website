@@ -33,19 +33,14 @@ export const About = () => {
                         <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
                         <div className="space-y-4 text-gray-600 leading-relaxed text-lg">
                             <p>
-                                Hello! I'm a passionate Full Stack Developer embarking on my professional journey.
-                                I love building things that live on the internet, from simple landing pages to complex web applications.
+                                I’m Jefferson Adda, a Computer Engineering student with a strong interest in web development and applied AI. I enjoy building systems that are not only functional, but fast, scalable, and reliable.
+
                             </p>
                             <p>
-                                My interest in web development started back when I decided to try editing custom Tumblr themes — turns out hacking together HTML & CSS is pretty fun!
+                                My work focuses on experimenting, prototyping, and optimizing performance, especially in backend-heavy applications. I’m interested in how data, APIs, and intelligent systems come together to solve real-world problems, and I enjoy pushing projects from idea to implementation.
                             </p>
                             <p>
-                                Fast-forward to today, and I've had the privilege of building software for a
-                                <span className="text-accent font-medium"> start-up</span>, a
-                                <span className="text-accent font-medium"> student organization</span>, and huge corporations.
-                            </p>
-                            <p>
-                                When I'm not coding, you can find me reading about new technologies, playing video games, or hanging out with friends.
+                                I’m currently seeking  <span className="text-accent font-medium"> internships</span> and  <span className="text-accent font-medium"> full-time opportunities</span> where I can grow as an engineer, contribute to meaningful products, and work on systems that operate at scale.
                             </p>
                         </div>
                     </motion.div>

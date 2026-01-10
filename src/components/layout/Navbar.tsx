@@ -3,7 +3,6 @@ import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-scroll';
 import { Button } from '../ui/Button';
 import { cn } from '../../lib/utils';
-import logo from '../../assets/logo.jpg';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,8 +32,8 @@ export const Navbar = () => {
         >
             <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
                 {/* Logo */}
-                <Link to="hero" smooth={true} duration={500} className="cursor-pointer">
-                    <img src={logo} alt="Jefferson" className="h-12 w-auto object-contain" />
+                <Link to="hero" smooth={true} duration={500} className="text-xl font-bold font-sans cursor-pointer">
+                    Dev<span className="text-accent">Portfolio</span>
                 </Link>
 
                 {/* Desktop Nav */}
