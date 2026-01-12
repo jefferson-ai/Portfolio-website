@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
 import { Button } from '../ui/Button';
+import ScrollStack, { ScrollStackItem } from '../ui/ScrollStack';
 
 interface Project {
     title: string;
@@ -55,57 +56,62 @@ export const Projects = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                        >
-                            <div className="relative h-48 overflow-hidden">
-                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10" />
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                                />
-                            </div>
+                <div className="max-w-4xl mx-auto">
+                    <ScrollStack className="space-y-8 pb-24">
+                        {projects.map((project, index) => (
+                            <ScrollStackItem key={index}>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    className="group bg-white rounded-xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300"
+                                >
+                                    <div className="grid md:grid-cols-2 gap-6">
+                                        <div className="relative h-64 md:h-auto overflow-hidden">
+                                            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10" />
+                                            <img
+                                                src={project.image}
+                                                alt={project.title}
+                                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                            />
+                                        </div>
 
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
-                                    {project.title}
-                                </h3>
-                                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                                    {project.description}
-                                </p>
+                                        <div className="p-6 flex flex-col justify-center">
+                                            <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
+                                                {project.title}
+                                            </h3>
+                                            <p className="text-gray-600 mb-6 leading-relaxed">
+                                                {project.description}
+                                            </p>
 
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {project.tags.map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className="px-2 py-1 text-xs font-medium bg-gray-50 text-gray-600 rounded-md border border-gray-100"
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
+                                            <div className="flex flex-wrap gap-2 mb-8">
+                                                {project.tags.map((tag) => (
+                                                    <span
+                                                        key={tag}
+                                                        className="px-3 py-1 text-xs font-medium bg-gray-50 text-gray-600 rounded-full border border-gray-100"
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                            </div>
 
-                                <div className="flex gap-3">
-                                    <Button variant="outline" size="sm" className="flex-1" onClick={() => window.open(project.githubUrl, '_blank')}>
-                                        <Github className="w-4 h-4 mr-2" />
-                                        Code
-                                    </Button>
-                                    <Button variant="default" size="sm" className="flex-1" onClick={() => window.open(project.liveUrl, '_blank')}>
-                                        <ExternalLink className="w-4 h-4 mr-2" />
-                                        Demo
-                                    </Button>
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
+                                            <div className="flex gap-4">
+                                                <Button variant="outline" size="sm" onClick={() => window.open(project.githubUrl, '_blank')}>
+                                                    <Github className="w-4 h-4 mr-2" />
+                                                    Code
+                                                </Button>
+                                                <Button variant="default" size="sm" onClick={() => window.open(project.liveUrl, '_blank')}>
+                                                    <ExternalLink className="w-4 h-4 mr-2" />
+                                                    Demo
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </ScrollStackItem>
+                        ))}
+                    </ScrollStack>
                 </div>
             </div>
         </section>

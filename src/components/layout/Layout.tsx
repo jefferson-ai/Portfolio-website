@@ -9,7 +9,7 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
     return (
-        <div className="min-h-screen flex flex-col font-sans text-gray-900 bg-white selection:bg-accent/20 relative overflow-hidden">
+        <div className="min-h-screen flex flex-col font-sans text-gray-900 bg-white selection:bg-accent/20 relative">
             {/* Background Silk Effect */}
             <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
                 <Silk
