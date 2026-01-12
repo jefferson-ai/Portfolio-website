@@ -14,6 +14,14 @@ interface Project {
 
 const projects: Project[] = [
     {
+        title: "Developer Portfolio",
+        description: "The website you are looking at right now. Built with modern web technologies, featuring a sticky scroll stacking effect, custom animations, and a clean minimalist design.",
+        tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+        githubUrl: "https://github.com/jefferson-ai/Portfolio-website",
+        liveUrl: "#",
+        image: "/portfolio-preview.png"
+    },
+    {
         title: "E-Commerce Dashboard",
         description: "A comprehensive dashboard for managing products, orders, and analytics. Features real-time data visualization and inventory management.",
         tags: ["React", "TypeScript", "Tailwind CSS", "Recharts"],
@@ -35,7 +43,7 @@ const projects: Project[] = [
         tags: ["React", "Recharts", "Firebase", "Context API"],
         githubUrl: "https://github.com/jefferson-ai/Expense-Tracker.git",
         liveUrl: "#",
-        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800&h=500" // Placeholder
+        image: "/expense-tracker-preview.png"
     }
 ];
 

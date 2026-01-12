@@ -33,7 +33,7 @@ export const Navbar = () => {
             <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
                 {/* Logo */}
                 <Link to="hero" smooth={true} duration={500} className="cursor-pointer">
-                    <img src="/logo.png" alt="Logo" className="h-16 w-auto" />
+                    <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
                 </Link>
 
                 {/* Desktop Nav */}
