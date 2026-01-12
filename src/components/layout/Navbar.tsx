@@ -81,10 +81,10 @@ export const Navbar = () => {
                         </Link>
                     ))}
                     <div className="flex gap-4 mt-6">
-                        <a href="https://github.com" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-accent transition-colors">
+                        <a href="https://github.com/jefferson-ai" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-accent transition-colors">
                             <Github size={20} />
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-accent transition-colors">
+                        <a href="https://www.linkedin.com/in/jeffersonadda" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-accent transition-colors">
                             <Linkedin size={20} />
                         </a>
                         <a href="mailto:hello@example.com" className="text-gray-500 hover:text-accent transition-colors">

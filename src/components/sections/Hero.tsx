@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '../ui/Button';
+import TextType from '../ui/TextType';
 import { Link } from 'react-scroll';
 
 export const Hero = () => {
@@ -18,9 +19,13 @@ export const Hero = () => {
                         </h2>
                         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
                             Building digital <br className="hidden md:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-500">
-                                experiences that matter.
-                            </span>
+                            <TextType
+                                text={["experiences that matter.", "solutions that scale.", "interfaces that delight."]}
+                                className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-500"
+                                typingSpeed={100}
+                                pauseDuration={2000}
+                                cursorCharacter="|"
+                            />
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
                             I craft clean, performant, and accessible web applications with a focus on details and user experience.
@@ -50,9 +55,9 @@ export const Hero = () => {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="flex justify-center gap-6"
                     >
-                        <SocialLink href="https://github.com" icon={<Github />} />
-                        <SocialLink href="https://linkedin.com" icon={<Linkedin />} />
-                        <SocialLink href="https://twitter.com" icon={<Twitter />} />
+                        <SocialLink href="https://github.com/jefferson-ai" icon={<Github />} />
+                        <SocialLink href="https://www.linkedin.com/in/jeffersonadda" icon={<Linkedin />} />
+                        <SocialLink href="https://x.com/Princewest_7" icon={<Twitter />} />
                     </motion.div>
                 </div>
             </div>
