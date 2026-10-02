@@ -820,9 +820,24 @@ textarea {
 a.hand-guide:hover {
   color: #a65a30;
 }
-.hero-action {
+  .hero-action {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.primary-action {
+  position: relative;
+}
+.resume-button {
+  border: 1px solid #d8d4ca;
+  background: transparent;
+  color: #37392f;
+}
+.resume-button:hover {
+  border-color: #ad704d;
+  background: #f0ede6;
 }
 .hero-guide {
   position: absolute;
@@ -923,6 +938,12 @@ a.hand-guide:hover {
   line-height: 1.65;
   margin-top: 9px;
 }
+.project-outcome {
+  display: block;
+  margin-top: 7px;
+  color: #818075;
+  font-size: 10px;
+}
 .issue-tools {
   display: block;
   font-size: 10px;
@@ -1013,8 +1034,10 @@ a.hand-guide:hover {
     height: 38px;
     margin-left: -3px;
   }
-  .hero-action {
-    margin-left: -40px;
+.hero-action {
+    margin-left: 0;
+    flex-direction: column;
+    gap: 14px;
   }
   .story-guide {
     font-size: 23px;
@@ -1055,6 +1078,48 @@ a.hand-guide:hover {
     top: -57px;
     right: 8px;
   }
+}
+
+.experience-list {
+  border-top: 1px solid #dedad2;
+}
+.experience-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px 28px;
+  padding: 22px 0;
+  border-bottom: 1px solid #dedad2;
+}
+.experience-row h3 {
+  font-size: 17px;
+  font-weight: 600;
+}
+.experience-row p,
+.experience-row time {
+  color: #77766e;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.experience-row ul {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-left: 18px;
+  color: #77766e;
+  font-size: 12px;
+  line-height: 1.8;
+}
+@media (max-width: 600px) {
+  .experience-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  .experience-row ul {
+    margin-top: 7px;
+  }
+}
+
+.experience-section .section-heading h2 {
+  font-size: clamp(35px, 3.7vw, 49px);
 }
 .hero-guide svg {
   position: absolute;

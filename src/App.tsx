@@ -41,84 +41,52 @@ function GuideArrow({ className = "" }: { className?: string }) {
 
 const projects = [
   {
-    name: "Personal Expense Tracker",
-    category: "WEB APPLICATION",
-    description:
-      "A little more clarity for everyday finances. Track income, understand spending, and see the bigger picture.",
-    image: "/expense-tracker-preview.png",
-    tags: ["React", "Firebase", "Recharts"],
-    url: "https://github.com/jefferson-ai/Expense-Tracker",
-    className: "expense",
+    name: "XKEEP",
+    category: "PERSONAL FINANCE · IOS",
+    description: "A SwiftUI finance app for expense tracking, budgets, savings goals, and analytics, built for 100+ student beta testers.",
+    tags: ["Swift", "SwiftUI", "Supabase", "PostgreSQL", "MVVM"],
+    outcome: "100+ student beta testers · Row Level Security · Face ID",
   },
   {
-    name: "Developer Portfolio",
-    category: "DESIGN & DEVELOPMENT",
-    description:
-      "My corner of the internet. A home for the things I build, what I’m learning, and what comes next.",
-    image: "/portfolio-preview.png",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
-    url: "https://github.com/jefferson-ai/Portfolio-website",
-    className: "portfolio",
+    name: "Patriot",
+    category: "EMERGENCY COORDINATION · IOS",
+    description: "An incident-reporting prototype designed to route citizen reports into Ghana’s 112 emergency response ecosystem.",
+    tags: ["Swift", "iOS", "Location", "Backend integration"],
+    outcome: "Image and GPS reports · Severity inputs · Incident routing",
   },
   {
-    name: "E-Commerce Dashboard",
-    category: "PRODUCT CONCEPT",
-    description:
-      "A dashboard concept for managing products, orders, inventory, and sales insights.",
-    tags: ["React", "TypeScript", "Data visualization"],
+    name: "LLM Cost Autopilot",
+    category: "LLM OBSERVABILITY · IN PROGRESS",
+    description: "A Python tool for tracking model selection, tokens, latency, and estimated inference costs across OpenAI API requests.",
+    tags: ["Python", "OpenAI API", "Usage instrumentation"],
+    outcome: "In progress",
   },
   {
-    name: "Task Management App",
-    category: "PRODUCT CONCEPT",
-    description:
-      "A productivity app concept for organizing tasks, team workspaces, and shared projects.",
-    tags: ["Next.js", "PostgreSQL", "Prisma"],
+    name: "School Enrollment System",
+    category: "EDUCATION · WEB APPLICATION",
+    description: "A database-driven enrollment platform for student registration and course selection, built with a five-person engineering team.",
+    tags: ["JavaScript", "HTML", "CSS", "MySQL"],
+    outcome: "Team of 5 · 200+ students",
   },
 ];
 const stack = [
   {
     icon: Code2,
-    title: "Frontend",
-    description: "Interfaces and interactions for the web.",
-    tools: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Next.js",
-      "Framer Motion",
-      "HTML5/CSS3",
-    ],
+    title: "Frontend Web Development",
+    description: "My strongest area: building responsive websites and user interfaces.",
+    tools: ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Next.js"],
   },
   {
     icon: Layers,
-    title: "Backend",
-    description: "APIs, data, and the systems behind products.",
-    tools: [
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Prisma",
-      "Supabase",
-      "REST APIs",
-    ],
+    title: "Python & AI",
+    description: "Some experience exploring AI and computer vision with Python.",
+    tools: ["Python", "YOLO", "Computer Vision", "OpenAI API"],
   },
   {
     icon: Terminal,
-    title: "Tools & DevOps",
-    description: "Tools I use to build, ship, and collaborate.",
-    tools: ["Git", "GitHub", "Vercel", "Docker", "VS Code", "Figma"],
-  },
-  {
-    icon: Check,
-    title: "Soft Skills",
-    description: "How I approach the work and work with others.",
-    tools: [
-      "Problem Solving",
-      "Communication",
-      "Teamwork",
-      "Agile/Scrum",
-      "Fast Learner",
-    ],
+    title: "Mobile Development",
+    description: "Some experience building iOS apps and mobile prototypes.",
+    tools: ["Swift", "SwiftUI", "iOS", "Supabase"],
   },
 ];
 
@@ -168,7 +136,7 @@ function App() {
             className={menuOpen ? "navigation open" : "navigation"}
             aria-label="Main navigation"
           >
-            {["Projects", "About", "Toolkit"].map((item) => (
+            {["Projects", "About", "Experience", "Toolkit"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -199,10 +167,12 @@ function App() {
       <main id="main">
         <section className="hero" id="home">
           <div className="hero-note">
-            <span className="status-dot" /> OPEN TO OPPORTUNITIES
+            <span className="status-dot" /> COMPUTER VISION ENGINEERING INTERN
           </div>
-          <p className="eyebrow">DEVELOPER. ENGINEER. ALWAYS CURIOUS.</p>
-          <h1 aria-label="Hey, I’m Jefferson. Building digital experiences that matter.">
+          <p className="eyebrow">COMPUTER ENGINEERING · SOFTWARE & AI</p>
+          <h1
+            aria-label="Hey, I’m Jefferson. Building digital experiences that matter."
+          >
             Hey, I’m Jefferson<span className="accent">.</span>
             <br />
             Building digital
@@ -224,21 +194,30 @@ function App() {
             </span>
           </h1>
           <p className="hero-description">
-            A computer engineering student building thoughtful web
-            <br className="desktop-break" /> experiences and exploring what’s
-            possible with AI.
+            Computer Engineering at the University of Ghana. Building software
+            across computer vision, edge AI, iOS, and the web.
           </p>
           <div className="hero-action">
-            <a className="button dark" href="#projects">
-              Explore my work <ArrowRight size={18} />
-            </a>
-            <a className="hand-guide hero-guide" href="#projects">
-              <span>Start here</span>
-              <GuideArrow />
+            <div className="primary-action">
+              <a className="button dark" href="#projects">
+                Explore my work <ArrowRight size={18} />
+              </a>
+              <a className="hand-guide hero-guide" href="#projects">
+                <span>Start here</span>
+                <GuideArrow />
+              </a>
+            </div>
+            <a
+              className="button resume-button"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download resume <ArrowUpRight size={17} />
             </a>
           </div>
           <div className="hero-bottom">
-            <span>CODE WITH PURPOSE. BUILD WITH CARE.</span>
+            <span>BSc COMPUTER ENGINEERING · EXPECTED 2027</span>
             <div className="social-links">
               <a
                 href="https://github.com/jefferson-ai"
@@ -280,7 +259,7 @@ function App() {
             <div className="project-list" id="project-list">
               {projects.map((project, index) => (
                 <article
-                  className={`project-issue ${project.url ? "project-link" : "project-concept"}`}
+                  className="project-issue"
                   key={project.name}
                 >
                   <span className="issue-category">
@@ -288,26 +267,10 @@ function App() {
                   </span>
                   <h3>
                     {project.name}
-                    {project.url ? (
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`Open ${project.name} on GitHub`}
-                      >
-                        <ArrowUpRight size={19} />
-                      </a>
-                    ) : (
-                      <span className="concept-mark">✳</span>
-                    )}
                   </h3>
                   <p>{project.description}</p>
-                  <span className="issue-tools">
-                    {project.tags.join(" · ")}
-                  </span>
-                  {!project.url && (
-                    <span className="concept-note">Concept · in progress</span>
-                  )}
+                  <span className="issue-tools">{project.tags.join(" · ")}</span>
+                  <span className="project-outcome">{project.outcome}</span>
                 </article>
               ))}
               <a
@@ -367,44 +330,107 @@ function App() {
                 <GuideArrow />
               </a>
               <p className="intro" id="about-intro">
-                I like understanding how things work.
+                I study Computer Engineering at the University of Ghana.
                 <br />
-                Even more, I like making them work better.
+                I build software for real-world problems.
               </p>
               <p>
-                I’m Jefferson, a Computer Engineering student with a love for
-                web development and applied AI. I’m drawn to the space where
-                good engineering meets a genuinely useful experience.
+                I’m a Computer Vision Engineering Intern in the Department of
+                Computer Engineering, working on a Python, YOLO, and Raspberry
+                Pi system to detect crop-threatening birds in real time. My
+                work includes camera systems, GStreamer pipelines, and
+                low-latency edge inference.
               </p>
               <p>
-                That usually means experimenting with an idea, connecting the
-                right APIs, and getting deep into the backend until everything
-                clicks. I care about the small details, the big picture, and
-                learning something new along the way.
+                I also freelance as a web developer, building responsive sites
+                and applications for small businesses. I’m interested in
+                computer vision, edge AI, iOS development, and practical LLM
+                applications.
               </p>
               <div className="availability">
                 <span className="status-dot" />
                 <p>
                   Looking for my next chapter.
                   <br />
-                  <span>Open to internships and full-time opportunities.</span>
+                  <span>BSc Computer Engineering, expected 2027.</span>
                 </p>
               </div>
             </div>
           </div>
         </section>
+        <section className="section experience-section" id="experience">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">WORK & SERVICE</p>
+              <h2>Experience<span className="accent">.</span></h2>
+            </div>
+            <p className="heading-note">
+              Engineering, freelance work,
+              <br />
+              and campus support.
+            </p>
+          </div>
+          <div className="experience-list">
+            <article className="experience-row">
+              <div>
+                <h3>Computer Vision Engineering Intern</h3>
+                <p>University of Ghana · Department of Computer Engineering</p>
+              </div>
+              <time>2026–Present</time>
+              <ul>
+                <li>
+                  Building a real-time bird detection and tracking system with
+                  Python, YOLO, and Raspberry Pi for agricultural pest
+                  deterrence.
+                </li>
+                <li>
+                  Evaluating global-shutter cameras and GStreamer pipelines to
+                  reduce motion artifacts and camera-to-inference latency.
+                </li>
+              </ul>
+            </article>
+            <article className="experience-row">
+              <div>
+                <h3>Freelance Web Developer</h3>
+                <p>Small business websites and web applications</p>
+              </div>
+              <time>Jan 2025–Present</time>
+              <ul>
+                <li>
+                  Build responsive websites, product catalogs, shopping
+                  interfaces, and interactive forms with HTML, CSS, and
+                  JavaScript.
+                </li>
+              </ul>
+            </article>
+            <article className="experience-row">
+              <div>
+                <h3>Technical Support Volunteer</h3>
+                <p>University of Ghana</p>
+              </div>
+              <time>Mar–Sep 2025</time>
+              <ul>
+                <li>
+                  Resolved hardware, software, connectivity, and system setup
+                  issues for students and faculty.
+                </li>
+                <li>
+                  Helped with software installation, network troubleshooting,
+                  and cybersecurity practices.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
         <section className="section toolkit-section" id="toolkit">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">MY EVERYDAY TOOLKIT</p>
-              <h2>
-                Good tools. Better ideas<span className="accent">.</span>
-              </h2>
+              <p className="eyebrow">MY CURRENT TOOLKIT</p>
+              <h2>Where I’m building<span className="accent">.</span></h2>
             </div>
             <p className="heading-note">
-              The technologies I reach for
-              <br />
-              to bring an idea to life.
+              Frontend web development is my strength, with some experience in
+              Python/AI and iOS.
             </p>
           </div>
           <div className="toolkit-grid">
