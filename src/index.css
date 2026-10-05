@@ -870,6 +870,176 @@ a.hand-guide:hover {
   padding-top: 145px;
   position: relative;
 }
+.xkeep-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 24px;
+  min-height: 505px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #111b29;
+  color: #f7f5ef;
+  scroll-margin-top: 110px;
+}
+.xkeep-feature-copy {
+  padding: 56px 0 56px 52px;
+  position: relative;
+  z-index: 1;
+}
+.xkeep-kicker {
+  color: #a7c3ee;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 1.8px;
+}
+.xkeep-feature h2 {
+  margin-top: 14px;
+  font-size: clamp(64px, 8vw, 112px);
+  line-height: 1;
+  letter-spacing: -5px;
+}
+.xkeep-feature h2 span {
+  color: #93b8ea;
+}
+.xkeep-lead {
+  margin-top: 19px;
+  font-size: clamp(21px, 2.5vw, 30px);
+  font-weight: 550;
+  letter-spacing: -0.8px;
+  line-height: 1.25;
+}
+.xkeep-summary {
+  max-width: 430px;
+  margin-top: 14px;
+  color: #b8c3d3;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.xkeep-facts {
+  display: flex;
+  gap: 30px;
+  margin: 29px 0;
+}
+.xkeep-facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.xkeep-facts strong {
+  color: #f7f5ef;
+  font-size: 23px;
+  line-height: 1.1;
+}
+.xkeep-facts span {
+  color: #a6b3c6;
+  font-size: 11px;
+}
+.xkeep-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px 20px;
+}
+.xkeep-testflight {
+  background: #a6c4f2;
+  color: #142030;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.xkeep-testflight:hover {
+  background: #c1d6f7;
+  transform: translateY(-2px);
+}
+.xkeep-story-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #e7eaf1;
+  font-size: 13px;
+  font-weight: 600;
+}
+.xkeep-story-link:hover {
+  color: #a6c4f2;
+}
+.xkeep-beta-note {
+  margin-top: 14px;
+  color: #93a4b9;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.xkeep-visual {
+  position: relative;
+  height: 100%;
+  min-height: 505px;
+  margin: 0;
+  background: radial-gradient(circle at 52% 44%, #29466d 0%, #17283f 48%, #111b29 78%);
+}
+.xkeep-visual img {
+  display: block;
+  position: absolute;
+  object-fit: cover;
+  border: 1px solid #42506a;
+  border-radius: 22px;
+  box-shadow: 0 20px 50px #0008;
+}
+.xkeep-visual-main {
+  width: min(82%, 390px);
+  aspect-ratio: 1;
+  top: 34px;
+  left: 6%;
+  transform: rotate(-4deg);
+}
+.xkeep-visual-secondary {
+  width: min(53%, 245px);
+  aspect-ratio: 1;
+  right: 3%;
+  bottom: 53px;
+  transform: rotate(7deg);
+}
+.xkeep-visual figcaption {
+  position: absolute;
+  right: 22px;
+  bottom: 18px;
+  color: #a6b3c6;
+  font-size: 10px;
+}
+.xkeep-story {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  padding: 48px 0 56px;
+  border-bottom: 1px solid #dedad2;
+  scroll-margin-top: 105px;
+}
+.xkeep-story h3 {
+  margin-top: 15px;
+  font-size: clamp(29px, 3.3vw, 44px);
+  line-height: 1.13;
+  letter-spacing: -1.5px;
+}
+.xkeep-story-details p {
+  margin-bottom: 15px;
+  color: #77766e;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.xkeep-story-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 21px;
+}
+.xkeep-story-tags span {
+  padding: 7px 11px;
+  border-radius: 20px;
+  background: #ebe9e0;
+  color: #56564f;
+  font-size: 11px;
+}
+.other-projects-label {
+  margin: 61px 0 25px;
+}
 .projects-guide {
   position: absolute;
   left: 13%;
@@ -1005,6 +1175,25 @@ a.hand-guide:hover {
   margin-top: 4px;
 }
 @media (max-width: 900px) {
+  .xkeep-feature {
+    grid-template-columns: 1fr 0.85fr;
+  }
+  .xkeep-feature-copy {
+    padding-left: 32px;
+  }
+  .xkeep-visual {
+    min-height: 500px;
+  }
+  .xkeep-visual-main {
+    width: 90%;
+    left: -3%;
+    top: 75px;
+  }
+  .xkeep-visual-secondary {
+    width: 66%;
+    right: 0;
+    bottom: 95px;
+  }
   .projects-editorial {
     gap: 30px;
   }
@@ -1022,6 +1211,36 @@ a.hand-guide:hover {
   }
 }
 @media (max-width: 600px) {
+  .xkeep-feature {
+    grid-template-columns: 1fr;
+  }
+  .xkeep-feature-copy {
+    padding: 37px 25px 25px;
+  }
+  .xkeep-feature h2 {
+    font-size: 70px;
+  }
+  .xkeep-visual {
+    min-height: 325px;
+  }
+  .xkeep-visual-main {
+    width: min(63%, 270px);
+    top: 5px;
+    left: 7%;
+  }
+  .xkeep-visual-secondary {
+    width: min(46%, 195px);
+    bottom: 38px;
+    right: 6%;
+  }
+  .xkeep-story {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 38px 0 45px;
+  }
+  .other-projects-label {
+    margin-top: 46px;
+  }
   .hero-guide {
     font-size: 22px;
     width: 95px;

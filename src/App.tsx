@@ -41,13 +41,6 @@ function GuideArrow({ className = "" }: { className?: string }) {
 
 const projects = [
   {
-    name: "XKEEP",
-    category: "PERSONAL FINANCE · IOS",
-    description: "A SwiftUI finance app for expense tracking, budgets, savings goals, and analytics, built for 100+ student beta testers.",
-    tags: ["Swift", "SwiftUI", "Supabase", "PostgreSQL", "MVVM"],
-    outcome: "100+ student beta testers · Row Level Security · Face ID",
-  },
-  {
     name: "Patriot",
     category: "EMERGENCY COORDINATION · IOS",
     description: "An incident-reporting prototype designed to route citizen reports into Ghana’s 112 emergency response ecosystem.",
@@ -251,10 +244,93 @@ function App() {
           id="projects"
           aria-labelledby="projects-title"
         >
-          <a className="hand-guide projects-guide" href="#project-list">
+          <a className="hand-guide projects-guide" href="#xkeep">
             <GuideArrow />
-            <span>Explore my latest projects</span>
+            <span>Start with XKEEP</span>
           </a>
+          <article className="xkeep-feature" id="xkeep">
+            <div className="xkeep-feature-copy">
+              <p className="xkeep-kicker">FEATURED PROJECT · IOS APP</p>
+              <h2 id="projects-title">XKEEP<span>.</span></h2>
+              <p className="xkeep-lead">
+                A clearer way to manage everyday money.
+              </p>
+              <p className="xkeep-summary">
+                I built XKEEP to help people track spending, plan budgets, and
+                work toward savings goals in one native iOS app.
+              </p>
+              <div className="xkeep-facts" aria-label="XKEEP project facts">
+                <div>
+                  <strong>100+</strong>
+                  <span>student beta testers</span>
+                </div>
+                <div>
+                  <strong>iOS</strong>
+                  <span>available through TestFlight</span>
+                </div>
+              </div>
+              <div className="xkeep-actions">
+                <a
+                  className="button xkeep-testflight"
+                  href="https://testflight.apple.com/join/Vg8xBQ85"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Try XKEEP on TestFlight <ArrowUpRight size={18} />
+                </a>
+                <a className="xkeep-story-link" href="#xkeep-story">
+                  Read the case study <ArrowRight size={18} />
+                </a>
+              </div>
+              <p className="xkeep-beta-note">
+                TestFlight installs the beta through Apple’s TestFlight app.
+              </p>
+            </div>
+            <figure className="xkeep-visual">
+              <img
+                className="xkeep-visual-main"
+                src="/xkeep-onboarding-dashboard.png"
+                alt="XKEEP onboarding artwork showing a balance and recent transactions"
+                width="1024"
+                height="1024"
+              />
+              <img
+                className="xkeep-visual-secondary"
+                src="/xkeep-onboarding-budgets.png"
+                alt="XKEEP onboarding artwork showing budgets and savings goals"
+                width="1024"
+                height="1024"
+                loading="lazy"
+              />
+              <figcaption>Onboarding artwork from the XKEEP app</figcaption>
+            </figure>
+          </article>
+          <div className="xkeep-story" id="xkeep-story">
+            <div>
+              <p className="eyebrow">BEHIND THE APP</p>
+              <h3>Built to make the numbers useful.</h3>
+            </div>
+            <div className="xkeep-story-details">
+              <p>
+                XKEEP brings transactions, category budgets, savings goals,
+                and spending reports into one place. The aim is to make it
+                easier to see where money went and what is left to plan with.
+              </p>
+              <p>
+                I developed the iOS app with Swift and SwiftUI, using Supabase
+                and PostgreSQL for accounts and data. The project also gave me
+                hands-on experience with real-time updates, access rules, and
+                biometric sign-in.
+              </p>
+              <div className="xkeep-story-tags" aria-label="Technologies used">
+                <span>Swift</span>
+                <span>SwiftUI</span>
+                <span>Supabase</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+          <p className="eyebrow other-projects-label">MORE PROJECTS</p>
           <div className="projects-editorial">
             <div className="project-list" id="project-list">
               {projects.map((project, index) => (
@@ -263,7 +339,7 @@ function App() {
                   key={project.name}
                 >
                   <span className="issue-category">
-                    0{index + 1} / {project.category}
+                    0{index + 2} / {project.category}
                   </span>
                   <h3>
                     {project.name}
@@ -283,8 +359,8 @@ function App() {
               </a>
             </div>
             <div className="projects-intro">
-              <p className="eyebrow">SELECTED PROJECTS</p>
-              <h2 id="projects-title">
+              <p className="eyebrow">BEYOND XKEEP</p>
+              <h2>
                 A few ideas.
                 <br />A lot of curiosity.
                 <br />
