@@ -973,24 +973,29 @@ a.hand-guide:hover {
   height: 100%;
   min-height: 505px;
   margin: 0;
-  background:
-    radial-gradient(circle at 55% 38%, #334e77 0%, transparent 48%),
-    linear-gradient(145deg, #162941, #101927 75%);
+  background: radial-gradient(circle at 52% 44%, #29466d 0%, #17283f 48%, #111b29 78%);
 }
 .xkeep-visual img {
   display: block;
   position: absolute;
-  object-fit: contain;
+  object-fit: cover;
+  border: 1px solid #42506a;
+  border-radius: 22px;
+  box-shadow: 0 20px 50px #0008;
 }
 .xkeep-visual-main {
-  width: min(103%, 485px);
+  width: min(82%, 390px);
   aspect-ratio: 1;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-3deg);
-  mix-blend-mode: screen;
-  -webkit-mask-image: radial-gradient(ellipse, #000 55%, transparent 78%);
-  mask-image: radial-gradient(ellipse, #000 55%, transparent 78%);
+  top: 34px;
+  left: 6%;
+  transform: rotate(-4deg);
+}
+.xkeep-visual-secondary {
+  width: min(53%, 245px);
+  aspect-ratio: 1;
+  right: 3%;
+  bottom: 53px;
+  transform: rotate(7deg);
 }
 .xkeep-visual figcaption {
   position: absolute;
@@ -1032,116 +1037,8 @@ a.hand-guide:hover {
   color: #56564f;
   font-size: 11px;
 }
-.xkeep-gallery {
-  padding-top: 60px;
-}
-.xkeep-gallery-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 27px;
-}
-.xkeep-gallery-heading h3 {
-  max-width: 540px;
-  margin-top: 13px;
-  font-size: clamp(30px, 3.8vw, 48px);
-  line-height: 1.12;
-  letter-spacing: -1.5px;
-}
-.xkeep-gallery-heading > p {
-  max-width: 295px;
-  color: #77766e;
-  font-size: 12px;
-  line-height: 1.65;
-}
-.xkeep-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-.xkeep-gallery-card {
-  min-width: 0;
-  margin: 0;
-}
-.xkeep-gallery-canvas {
-  position: relative;
-  height: 380px;
-  overflow: hidden;
-  border-radius: 18px;
-  isolation: isolate;
-}
-.xkeep-gallery-canvas::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  opacity: 0.45;
-  background-image: radial-gradient(#fff3 0.7px, transparent 0.7px);
-  background-size: 7px 7px;
-}
-.xkeep-gallery-canvas-log {
-  background:
-    radial-gradient(circle at 70% 30%, #354b64, transparent 47%),
-    linear-gradient(145deg, #17273a, #0b111a);
-}
-.xkeep-gallery-canvas-plan {
-  background:
-    radial-gradient(circle at 25% 35%, #525c52, transparent 50%),
-    linear-gradient(135deg, #293b38, #101917);
-}
-.xkeep-gallery-index {
-  position: absolute;
-  top: 19px;
-  left: 21px;
-  z-index: 2;
-  padding: 7px 10px;
-  border: 1px solid #ffffff35;
-  border-radius: 20px;
-  background: #0a1118a8;
-  color: #e9edf1;
-  font-size: 10px;
-  font-weight: 650;
-  letter-spacing: 1px;
-}
-.xkeep-gallery-canvas img {
-  display: block;
-  position: absolute;
-  width: min(78%, 385px);
-  height: auto;
-  left: 50%;
-  top: 46px;
-  transform: translateX(-50%);
-  mix-blend-mode: screen;
-  -webkit-mask-image: linear-gradient(#000 75%, transparent 100%);
-  mask-image: linear-gradient(#000 75%, transparent 100%);
-}
-.xkeep-gallery-canvas-log img {
-  width: min(82%, 405px);
-  top: 28px;
-}
-.xkeep-gallery-canvas-plan img {
-  width: min(76%, 375px);
-  top: 48px;
-}
-.xkeep-gallery-card figcaption {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 16px 3px 0;
-}
-.xkeep-gallery-card figcaption strong {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -0.4px;
-}
-.xkeep-gallery-card figcaption span {
-  color: #77766e;
-  font-size: 12px;
-  line-height: 1.6;
-}
 .other-projects-label {
-  margin: 75px 0 25px;
+  margin: 61px 0 25px;
 }
 .projects-guide {
   position: absolute;
@@ -1288,8 +1185,14 @@ a.hand-guide:hover {
     min-height: 500px;
   }
   .xkeep-visual-main {
-    width: 115%;
-    top: 48%;
+    width: 90%;
+    left: -3%;
+    top: 75px;
+  }
+  .xkeep-visual-secondary {
+    width: 66%;
+    right: 0;
+    bottom: 95px;
   }
   .projects-editorial {
     gap: 30px;
@@ -1321,31 +1224,22 @@ a.hand-guide:hover {
     min-height: 325px;
   }
   .xkeep-visual-main {
-    width: min(100%, 355px);
-    top: 47%;
+    width: min(63%, 270px);
+    top: 5px;
+    left: 7%;
+  }
+  .xkeep-visual-secondary {
+    width: min(46%, 195px);
+    bottom: 38px;
+    right: 6%;
   }
   .xkeep-story {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 38px 0 45px;
   }
-  .xkeep-gallery {
-    padding-top: 42px;
-  }
-  .xkeep-gallery-heading {
-    align-items: start;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .xkeep-gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 31px;
-  }
-  .xkeep-gallery-canvas {
-    height: 335px;
-  }
   .other-projects-label {
-    margin-top: 52px;
+    margin-top: 46px;
   }
   .hero-guide {
     font-size: 22px;

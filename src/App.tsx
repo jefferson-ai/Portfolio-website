@@ -294,6 +294,14 @@ function App() {
                 width="1024"
                 height="1024"
               />
+              <img
+                className="xkeep-visual-secondary"
+                src="/xkeep-onboarding-budgets.png"
+                alt="XKEEP onboarding artwork showing budgets and savings goals"
+                width="1024"
+                height="1024"
+                loading="lazy"
+              />
               <figcaption>Onboarding artwork from the XKEEP app</figcaption>
             </figure>
           </article>
@@ -322,52 +330,6 @@ function App() {
               </div>
             </div>
           </div>
-          <section className="xkeep-gallery" aria-labelledby="xkeep-gallery-title">
-            <div className="xkeep-gallery-heading">
-              <div>
-                <p className="eyebrow">A CLOSER LOOK</p>
-                <h3 id="xkeep-gallery-title">The app, one moment at a time.</h3>
-              </div>
-              <p>
-                These visual previews come from XKEEP’s onboarding. The beta is
-                available to try through TestFlight.
-              </p>
-            </div>
-            <div className="xkeep-gallery-grid">
-              <figure className="xkeep-gallery-card">
-                <div className="xkeep-gallery-canvas xkeep-gallery-canvas-log">
-                  <span className="xkeep-gallery-index">01 / LOG A TRANSACTION</span>
-                  <img
-                    src="/xkeep-onboarding-logging.png"
-                    alt="XKEEP onboarding artwork showing the expense entry screen"
-                    width="1024"
-                    height="1024"
-                    loading="lazy"
-                  />
-                </div>
-                <figcaption>
-                  <strong>Capture the everyday.</strong>
-                  <span>Record expenses by category as they happen.</span>
-                </figcaption>
-              </figure>
-              <figure className="xkeep-gallery-card">
-                <div className="xkeep-gallery-canvas xkeep-gallery-canvas-plan">
-                  <span className="xkeep-gallery-index">02 / PLAN AHEAD</span>
-                  <img
-                    src="/xkeep-onboarding-budgets.png"
-                    alt="XKEEP onboarding artwork showing budgets and savings goals"
-                    width="1024"
-                    height="1024"
-                    loading="lazy"
-                  />
-                </div>
-                <figcaption>
-                  <strong>See what is left.</strong>
-                  <span>Keep category budgets and savings goals in view.</span>
-                </figcaption>
-              </figure>
-            </div>
-          </section>
           <p className="eyebrow other-projects-label">MORE PROJECTS</p>
           <div className="projects-editorial">
             <div className="project-list" id="project-list">
