@@ -307,21 +307,40 @@ function App() {
           </article>
           <div className="xkeep-story" id="xkeep-story">
             <div>
-              <p className="eyebrow">BEHIND THE APP</p>
-              <h3>Built to make the numbers useful.</h3>
+              <p className="eyebrow">XKEEP CASE STUDY</p>
+              <h3>Making spending easier to act on.</h3>
+              <p className="xkeep-story-summary">
+                A native iOS finance app now being tried by more than 100
+                student beta testers.
+              </p>
             </div>
             <div className="xkeep-story-details">
-              <p>
-                XKEEP brings transactions, category budgets, savings goals,
-                and spending reports into one place. The aim is to make it
-                easier to see where money went and what is left to plan with.
-              </p>
-              <p>
-                I developed the iOS app with Swift and SwiftUI, using Supabase
-                and PostgreSQL for accounts and data. The project also gave me
-                hands-on experience with real-time updates, access rules, and
-                biometric sign-in.
-              </p>
+              <div className="xkeep-story-step">
+                <h4>The problem</h4>
+                <p>
+                  A list of transactions shows what was spent, but it does not
+                  show how that spending affects a budget or savings goal. XKEEP
+                  connects those views so the numbers are easier to use.
+                </p>
+              </div>
+              <div className="xkeep-story-step">
+                <h4>What I built and why</h4>
+                <p>
+                  I used SwiftUI for a native iOS app and Supabase with
+                  PostgreSQL for accounts and data. Transactions, wallets,
+                  category budgets, savings goals, and reports live in one
+                  product, with access rules for personal data.
+                </p>
+              </div>
+              <div className="xkeep-story-step">
+                <h4>How it changed</h4>
+                <p>
+                  I added multi-wallet onboarding, weekly and monthly budget
+                  periods, and a widget for weekly budget progress. I also
+                  corrected the calculations so transfers between wallets do
+                  not count as spending.
+                </p>
+              </div>
               <div className="xkeep-story-tags" aria-label="Technologies used">
                 <span>Swift</span>
                 <span>SwiftUI</span>

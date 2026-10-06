@@ -1018,17 +1018,36 @@ a.hand-guide:hover {
   line-height: 1.13;
   letter-spacing: -1.5px;
 }
-.xkeep-story-details p {
-  margin-bottom: 15px;
+.xkeep-story-summary {
+  max-width: 310px;
+  margin-top: 17px;
+  color: #77766e;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.xkeep-story-step {
+  padding: 0 0 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e3dfd6;
+}
+.xkeep-story-step h4 {
+  margin: 0 0 8px;
+  color: #a56947;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+.xkeep-story-step p {
   color: #77766e;
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 .xkeep-story-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 21px;
+  margin-top: 4px;
 }
 .xkeep-story-tags span {
   padding: 7px 11px;
